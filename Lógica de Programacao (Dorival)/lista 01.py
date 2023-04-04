@@ -26,6 +26,7 @@ for i, bebida in enumerate(BEBIDAS):
 A = int(input("Digite um número inteiro: "))
 B = int(input("Digite um número inteiro: "))
 C = int(input("Digite um número inteiro: "))
+
 if A == 0 or B == 0 or C and A != 7:    
     print("OK")
 else:
@@ -33,6 +34,7 @@ else:
 #12
 altura = int(input("Altura: "))
 largura = int(input("Largura: "))
+
 if largura > altura or largura == altura:
     print("Verdadeiro")
 else:
