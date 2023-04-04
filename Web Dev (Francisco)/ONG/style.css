@@ -1,0 +1,84 @@
+body {
+  background-color: rgb(244, 244, 244);
+  position: relative;
+}
+
+header {
+  background-color: rgb(111, 153, 206);
+  color: white;
+  width: 100%;
+  height: 80px;
+  line-height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 20px;
+  font-family: Helvetica;
+  display: flex;
+  justify-content: center;
+}
+
+header img {
+  height: 80%;
+  max-height: 80%;
+  width: auto;
+  margin-right: 10px; /* ajuste a margem conforme necessário */
+  align-self: center;
+  margin-top: 7px;
+}
+
+.texto-com-animacao {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 9px; /* altura inicial do sublinhado */
+  border-bottom: 2px solid transparent; /* sublinhado transparente */
+  transition: border-bottom-width 0.4s ease-in-out; /* transição do sublinhado */
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+}
+
+.texto-com-animacao:hover {
+  border-bottom-width: 10px; /* altura final do sublinhado */
+}
+
+.texto-com-animacao::before {
+  content: "";
+  position: absolute;
+  bottom: 15px;
+  left: 50%; /* alinhar com o centro do texto */
+  width: 0; /* começar sem largura */
+  height: 2px; /* altura do sublinhado */
+  background-color: rgb(255, 255, 255); /* cor do sublinhado */
+  transition: width 0.3s ease-in-out; /* transição da largura */
+  transform: translateX(-50%); /* centralizar o sublinhado */
+}
+
+.texto-com-animacao:hover::before,
+.texto-com-animacao.ativo::before {
+  width: 70%; /* largura final do sublinhado */
+}
+
+.texto-com-animacao.ativo{
+  border-bottom-width: 10px;
+  }
+
+h1 {
+  color: black;
+  position: fixed;
+  top:80px;
+  }
+
+footer {
+  background-color: rgb(111, 153, 206);
+  color: white;
+  width: 100%;
+  height: 200px;
+  left: 0;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  }
