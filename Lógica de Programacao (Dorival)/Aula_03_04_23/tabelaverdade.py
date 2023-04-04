@@ -3,6 +3,8 @@ vetorPossibilidade = [True, False]
 print("Testador de Fórmulas Tabajara 1.0")
 print("(A ^ B) v (¬A ^ ¬B)")
 
+linhas = 0
+
 for a in vetorPossibilidade:
     for b in vetorPossibilidade:
         if (a and b) or (not a and not b):
@@ -10,6 +12,8 @@ for a in vetorPossibilidade:
         else:
             resultadoF=False
         print(f'A = {a} \t B = {b} \t H: {resultadoF}.')
+        linhas+=1
+print(f'A tabela tem {linhas} linhas.')
 
 print('='*49)
 
