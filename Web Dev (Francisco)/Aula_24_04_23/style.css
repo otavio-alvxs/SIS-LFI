@@ -1,0 +1,46 @@
+header #topo {
+    display: flex;
+    align-items: center;
+    background-color: #ddd;
+    }
+
+header h17 {
+    width: 100%;
+    padding: 31.2 px;
+    }
+
+header img {
+    width: auto;
+    height: 70px;
+    }
+nav {
+    background-color: #00adef;
+    padding: 10px;
+
+    }
+
+nav a {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    }
+
+nav a:hover {
+    color: white;
+    background-color: #4571b0;
+    }
+
+main {
+    background-color: #000;
+    color: #0000ff;
+    }
+
+footer {
+    align-items: center;
+    background-color: #ddd;
+    padding: 2px;
+    }
+
+header p {
+    text-align: center;
+    }
