@@ -1,0 +1,24 @@
+.jogos {
+    font-family: Arial;
+    font-size: 20pt;
+    display: flex;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    }
+
+.jogo1 { 
+    width: 50%; height: 300px;
+    display: inline-block;
+    background-image: url(img/SC2.jpg);
+    background-size: 100% 100%;
+    padding-left: 30px;
+    padding-top: 30px;
+    }
+
+.jogo1 img{
+    width: 100%;
+    }
+
+.jogo2 {
+    width: 200px;
+    }

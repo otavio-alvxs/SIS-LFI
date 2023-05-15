@@ -1,0 +1,27 @@
+body, div, p {
+    margin: 0;
+    }
+
+.principal {
+    font-family: Arial;
+    font-size: 20pt;
+    display: flex;
+    }
+
+.primeira{
+    width: 33.33%; height: 150px;
+    background-color: chartreuse;
+    display: inline-block;
+    }
+
+.segunda {
+    width: 33.33%; height: 150px;
+    background-color: yellow;
+    display: inline-block;
+    }
+
+.terceira {
+    width: 33.33%; height: 150px;
+    background-color: deepskyblue;
+    display: inline-block;
+    }
