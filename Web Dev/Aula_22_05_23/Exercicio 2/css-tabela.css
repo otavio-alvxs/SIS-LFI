@@ -1,0 +1,45 @@
+body {
+    text-align: center;
+    }
+
+table {
+    border-collapse: collapse;
+    background-color: rgb(0, 70, 175);
+    width: 100%;
+    border: 1px solid black;
+    text-align: left;
+    align-items: center;
+    }
+
+th, td {
+    padding: 5px;
+    border: 1px solid black;
+    }
+
+th {
+    background-color: lightgray;
+    }
+
+.primeira {
+    background-color: rgb(255, 158, 78);
+    }
+
+.segunda {
+    background-color: rgb(0, 140, 255);
+    }
+
+.terceira {
+    background-color: rgb(253, 255, 120);
+    }
+
+.quarta {
+    background-color: rgb(141, 255, 141);
+    }
+
+.quinta {
+    background-color: pink;
+    }
+
+.sexta {
+    background-color: violet;
+    }

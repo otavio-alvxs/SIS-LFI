@@ -1,0 +1,29 @@
+table {
+    border-collapse: collapse;
+    background-color: rgb(0, 70, 175);
+    width: 500px;
+    border: 1px solid black;
+    text-align: center;
+    align-items: center;
+    }
+
+th, td {
+    padding: 2px;
+    border: 1px solid black;
+    }
+
+.vermelho {
+    background-color: red;
+    color: white;
+    }
+
+.amarelo {
+    background-color: yellow;
+    font-weight: bold;
+    font-style: italic;
+    }
+
+.verde {
+    background-color: lime;
+    color: white;
+    }
