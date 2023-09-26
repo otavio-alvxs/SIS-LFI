@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <title>Exercicio 1</title>
+</head>
+<html>
+    <h2>1 - Deseja-se criar um sistema para calcular o valor de troco para um caixa de uma loja, ondeo usuário irá digitar o valor total da compra e o valor pago pelo cliente.</h2>
+    Valor da compra: <input type="text" id="total" placeholder="R$">
+    <br>
+    Valor pago pelo cliente: <input type="text" id="pagamento" placeholder="R$">
+    <br>
+    <input type="button" value="calcular" onclick="calcular()">
+    <br>
+    <div id="resp">
+    </div>
+</html>
+<script>
+    function calcular(){
+        var n1 = document.getElementById("total");
+        var n2 = document.getElementById("pagamento");
+        var resp = document.getElementById("resp");
+        var total = parseFloat(n1.value);
+        var pagamento = parseFloat(n2.value);
+
+        resp.innerHTML = 'Valor do troco R$ ' + (pagamento - total);
+    }
+</script>

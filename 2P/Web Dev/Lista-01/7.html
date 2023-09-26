@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercício 7</title>
+</head>
+<body>
+    <h2>Exercício 7 - Custo ao Consumidor de um Carro</h2>
+
+    Custo de fábrica do carro: <input type="text" id="custoFabrica">
+    <br>
+    <input type="button" value="Calcular" onclick="calcularCustoConsumidor()">
+    <br>
+    <div id="resultado"></div>
+
+    <script>
+        function calcularCustoConsumidor() {
+            var custoFabrica = parseFloat(document.getElementById("custoFabrica").value);
+
+            var porcentagemDistribuidor = 0.28;
+            var impostos = 0.45;
+
+            var custoConsumidor = custoFabrica + (custoFabrica * impostos) + (custoFabrica * porcentagemDistribuidor);
+
+            var resultado = document.getElementById("resultado");
+            resultado.innerHTML = "Custo ao consumidor: R$" + custoConsumidor.toFixed(2);
+        }
+    </script>
+</body>
+</html>

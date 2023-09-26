@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="nome">
+
+    <input type="number" id="data">
+
+    <input type="button" value="OK"
+        onclick="mensagem()">
+
+    <div id="msg"></div>
+
+    <script>
+        function mensagem(){
+            var nome = document.getElementById("nome");
+            var data = document.getElementById("data");
+
+            var nome = nome.value
+            var data = parseInt(data.value)
+            var idade = 2023 - data
+            msg.innerHTML = "Olá " + nome + ", você tem " + idade + " anos.";
+        }
+    </script>
+</body>
+</html>

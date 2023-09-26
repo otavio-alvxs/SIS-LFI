@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+    <title>Exercicio 3</title>
+</head>
+<html>
+    <h2>3 - Uma nutricionista está tendo dificuldade em calcular o peso ideal de seus pacientes. Parasolucionar este problema vamos desenvolver um programa que receba a altura do paciente, emostre o seu peso ideal utilizando a seguinte equação:
+        (Altura*Altura) * 25</h2>
+    
+    Digite a altura do paciente: <input type="text" id="altura" placeholder="Centímetros">
+    <br>
+    <input type="button" value="Calcular" onclick="calcular()">
+    <br>
+    <div id="peso"></div>
+</html>
+<script>
+    function calcular(){
+        alt = document.getElementById("altura");
+        altura = parseFloat(alt.value);
+
+        peso.innerHTML = "O peso ideal do paciente é de: " ((altura * altura) * 25) + " Kgs";
+    }
+</script>

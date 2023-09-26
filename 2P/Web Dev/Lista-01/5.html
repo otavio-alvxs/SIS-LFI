@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercício 5</title>
+</head>
+<body>
+    <h2>Exercício 5 - Conversão de Semanas para Meses e Dias</h2>
+
+    Semanas: <input type="text" id="semanas">
+    <br>
+    <input type="button" value="Calcular" onclick="calcularConversao()">
+    <br>
+    <div id="resultado"></div>
+
+    <script>
+        function calcularConversao() {
+            var semanas = parseInt(document.getElementById("semanas").value);
+
+            var dias = semanas * 7;
+            var meses = Math.floor(dias / 30);
+            dias = dias % 30;
+
+            var resultado = document.getElementById("resultado");
+            resultado.innerHTML = semanas + " semanas equivalem a " + meses + " meses e " + dias + " dias.";
+        }
+    </script>
+</body>
+</html>

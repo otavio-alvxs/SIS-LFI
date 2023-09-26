@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <title>Exercicio 2</title>
+</head>
+<html>
+    <h2>2 - Em uma corrida automobilística, o grid de largada é determinado pelo tempo médio em que o piloto leva para efetuar cada volta no circuito. Considerando que o piloto fará 3 voltas, mostre o tempo total gasto e a média de tempo entre as voltas.</h2>
+    <br>
+    Volta 1: <input type="text" id="v1" placeholder="segundos">
+    <br>
+    Volta 2: <input type="text" id="v2" placeholder="segundos">
+    <br>
+    Volta 3: <input type="text" id="v3" placeholder="segundos">
+    <br>
+    <input type="button" value="Calcular" onclick="calcular()">
+    <br>
+    <div id="volta1"></div>
+    <br>
+    <div id="volta2"></div>
+    <br>
+    <div id="volta3"></div>
+    <br>
+    <div id="total"></div>
+    <br>
+    <div id="media"></div>
+</html>
+<script>
+    function calcular(){
+        var n1 = document.getElementById("v1");
+        var n2 = document.getElementById("v2");
+        var n3 = document.getElementById("v3");
+        var v1 = parseFloat(n1.value);
+        var v2 = parseFloat(n2.value);
+        var v3 = parseFloat(n3.value);
+        
+        volta1.innerHTML = "Tempo da primeira volta: " + v1 + " segundos.";
+        volta2.innerHTML = "Tempo da segunda volta: " + v2 + " segundos.";
+        volta3.innerHTML = "Tempo da terceira volta: " + v3 + " segundos";
+        total.innerHTML = "Tempo total gasto: " + (v1 + v2 + v3) + " segundos.";
+        media.innerHTML = "Tempo médio entre as voltas: " + ((v1 + v2 + v3) / 3) + " segundos.";
+    }
+</script>

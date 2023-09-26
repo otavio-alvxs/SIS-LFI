@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Exercicio 5</title>
+    </head>
+    <body>
+        <label>
+            Produto: <select id="produto">
+            <option>Coca-Cola Lata</option>
+            <option>Coxinha</option>
+            <option>Pão de queijo</option>
+        </select>
+        </label>
+
+        <br><br>
+
+        Quantidade:
+        <input type="number" id="qtd">
+
+        <br><br>
+
+        <input type="radio" name="pagamento" id="din"> Dinheiro
+        <input type="radio" name="pagamento" id="cartao"> Cartão
+
+        <br><br>
+
+        <input type="checkbox" id="entrega"> Para entrega ?
+
+        <br><br>
+
+        <input type="button" value="Calcular"
+                    onclick="calcular()">
+        
+        <div id="resp">
+        </div>
+    </body>
+    <script src="ex05.js"></script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercício 4</title>
+</head>
+<body>
+    <h2>Exercício 4 - Valor de Boleto Atrasado</h2>
+
+    Valor do boleto: <input type="text" id="valorBoleto">
+    <br>
+    Dias de atraso: <input type="text" id="diasAtraso">
+    <br>
+    <input type="button" value="Calcular" onclick="calcularValor()">
+    <br>
+    <div id="resultado"></div>
+
+    <script>
+        function calcularValor() {
+            var valorBoleto = parseFloat(document.getElementById("valorBoleto").value);
+            var diasAtraso = parseInt(document.getElementById("diasAtraso").value);
+
+            var multa = valorBoleto * 0.02;
+            var despesaCobranca = 2.00;
+            var juros = valorBoleto * (0.005 * diasAtraso);
+
+            var valorTotal = valorBoleto + multa + despesaCobranca + juros;
+
+            var resultado = document.getElementById("resultado");
+            resultado.innerHTML = "Valor a ser pago: R$" + valorTotal.toFixed(2);
+        }
+    </script>
+</body>
+</html>

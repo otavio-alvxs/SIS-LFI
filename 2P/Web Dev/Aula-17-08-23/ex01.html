@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="txt1">
+
+    <input type="text" id="txt2">
+    <br/>
+    <input type="button" value="calc"
+            onclick="calcular()">
+    
+    <div id="resp"></div>
+</body>
+<script>
+    function calcular(){
+        var t1 = document.getElementById("txt1")
+        var t2 = document.getElementById("txt2")
+        var r = document.getElementById("resp")
+
+        var n1 = parseFloat(t1.value);
+        var n2 = parseFloat(t2.value);
+
+        var m = ((n1 + n2) / 2);
+
+        r.innerHTML = "média" + m.toFixed(1);
+    }
+</script>
+</html>
