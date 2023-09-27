@@ -1,9 +1,12 @@
 function calcular() {
-    var gasolina = document.getElementById('gasolina').value
-    var etanol = documet.getElementById('etanol').value
+    var gasolina = document.getElementById('gasolina').value;
+    var etanol = documet.getElementById('etanol').value;
 
-    if (etanol < (gasolina * 0.7)){
-        document.getElementById('resp').innerHTML = 'Compensa mais abastecer no etanol.'
+    if (etanol < (gasolina * 0.7)) {
+        resp.innerHTML = 'É mais viável abastecer com etanol.';
+    }
+    else {
+        resp.innerHTML = 'É mais viável abastecer com gasolina.';
     }
 
     }
