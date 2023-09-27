@@ -90,7 +90,7 @@ while opcao !=7:
             print('=' * 35)
             print(f"Item {delete} não encontrado no estoque.")
             print('=' * 35)
-            atualizarbanco()
+        atualizarbanco()
 
     elif opcao == 5:
         print ('=' * 17)
@@ -109,42 +109,42 @@ while opcao !=7:
         else:
             print('CÓDIGO INEXISTENTE')
     elif opcao ==6:
-        print('='*35)
+        print('=' * 35)
         print('= APLICAR DESCONTOS OU ACRESCIMOS =')
-        print('='*35)
+        print('=' * 35)
         print('Deseja aplicar um acrescimo ou um desconto nos produtos? 1/2')
         print(' ')
         print('1 - Aplicar Acrescimos')
-        print('-'*35)
+        print('-' * 35)
         print('2 - Aplicar Descontos')
-        print('='*35)
+        print('=' * 35)
         resp = int(input('Opção selecionada : '))
-        print('='*35)
+        print('=' * 35)
         if resp == 1:
             print('Deseja Aplicar Acrescimo em TODOS os produtos ou somente um? 1/2')
-            print('-'*35)
+            print('-' * 35)
             print('1 - Somente em um')
-            print('-'*35)
+            print('-' * 35)
             print('2 - TODOS')
-            print('-'*35)
+            print('-' * 35)
             resp_opcao = int(input('Opção selecionada : '))
-            print('='*35)
+            print('=' * 35)
             
             if resp_opcao == 1:
                 app_acre = input('Digite o código do produto : ').lower()
-                print('-'*35)
+                print('-' * 35)
                 acrescimo = float(input('Digite qual a porcentagem do acréscimo : '))
                 if app_acre in bancodados:
                     acrescimo1 = (acrescimo / 100) * bancodados[app_acre]['PRECO']
                     novo_valor = bancodados[app_acre]['PRECO'] + acrescimo1
                     bancodados[app_acre]['PRECO'] = novo_valor
-                    print('PRECO ALTERADO COM SUCESSO')
+                    print('PREÇO ALTERADO COM SUCESSO')
                     atualizarbanco()
                 else:
                     print("CÓDIGO INEXISTENTE")
             elif resp_opcao == 2:
                 acrescimo = float(input('Digite qual a porcentagem do acrescimo : '))
-                print('-'*35)
+                print('-' * 35)
                 for produto_id, produto_info in bancodados.items():
                     if "PRECO" in produto_info:
                         preco_atual = produto_info["PRECO"]
@@ -157,20 +157,20 @@ while opcao !=7:
         
         elif resp == 2:
             print('Deseja Aplicar Desconto em TODOS os produtos ou somente um? 1/2')
-            print('-'*35)
+            print('-' * 35)
             print('1 - Somente em um')
-            print('-'*35)
+            print('-' * 35)
             print('2 - TODOS')
-            print('-'*35)
+            print('-' * 35)
             resp_opcao1 = int(input('Opção selecionada : '))
-            print('='*35)
+            print('=' * 35)
 
             if resp_opcao1 == 1:
-                print('='*35)
+                print('=' * 35)
                 app_desc = input('Digite o código do item desejado : ').lower()
-                print('-'*35)
+                print('-' * 35)
                 desconto = float(input('Digite qual a porcentagem de desconto : '))
-                print('-'*35)
+                print('-' * 35)
                 if app_desc in bancodados:
                     desconto1 = (desconto / 100) * bancodados[app_desc]['PRECO']
                     descontado =  bancodados[app_desc]['PRECO'] - desconto1
@@ -180,7 +180,7 @@ while opcao !=7:
 
             elif resp_opcao1 == 2:
                 desconto = float(input('Digite qual a porcentagem do desconto : '))
-                print('-'*35)
+                print('-' * 35)
                 for produto_id, produto_info in bancodados.items():
                     if "PRECO" in produto_info:
                         preco_atual = produto_info["PRECO"]
@@ -188,10 +188,11 @@ while opcao !=7:
                         novo_preco1 = preco_atual - novo_preco
                         produto_info["PRECO"] = novo_preco1
                         print("PREÇO AJUSTADO COM SUCESSO")
+                atualizarbanco()
             else:
                 print('OPCAO INVÁLIDA')
     elif opcao ==0:
-        print('='*20)
+        print('=' * 20)
         print('SAIR')
         break
     else:
