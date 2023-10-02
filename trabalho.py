@@ -6,7 +6,6 @@ def atualizarbanco():
                     json.dump(bancodados, arquivo, indent=4)
 
 bancodados = {}
-opcao = 1
 
 try:
     with open('estoque.json', 'r') as arquivo:
@@ -15,18 +14,27 @@ try:
 except:
     print('O Arquivo não existe.')
 
-while opcao !=7:
-    print('=' * 35)
-    print('1 - Adicionar')
-    print('2 - Consultar por Código')
-    print('3 - Consultar Todos')
-    print('4 - Excluir Itens')
-    print('5 - Alterar Preço')
-    print('6 - Aplicar Acréscimos e Descontos')
-    print('0 - Sair')
-    print('=' * 35)
+opcao = 9
 
-    opcao = int(input('Escolha a opcao : '))
+opcoes = {
+    1: 'Adicionar',
+    2: 'Consultar por Código',
+    3: 'Consultar Todos',
+    4: 'Excluir Itens',
+    5: 'Alterar Preço',
+    6: 'Aplicar Acréscimos e Descontos',
+    0: 'Sair'
+}
+
+while opcao != 7:  # Você estava usando 7 como saída, então mantive essa lógica.
+    print('=' * 35)
+    for numero, descricao in opcoes.items():
+        print(f'{numero} - {descricao}')
+    print('=' * 35)
+    opcao = int(input('Escolha a opção: '))
+
+    if opcao not in opcoes:
+        print('Opção inválida')
 
     if opcao ==1:
         print('=' * 12)
