@@ -1,5 +1,11 @@
 import json 
 
+def retornomenu():
+    resp = input('Deseja continuar (S para sim e qualquer outra coisa para voltar ao menu)?')
+    if resp.lower() != 's':
+        opcao = 7
+        return opcao
+    
 #função que adiciona ou atualiza dados no json.
 def atualizarbanco(): 
     with open('estoque.json', 'w') as arquivo:
@@ -36,7 +42,7 @@ while opcao != 7:  # Você estava usando 7 como saída, então mantive essa lóg
     if opcao not in opcoes:
         print('Opção inválida')
 
-    if opcao ==1:
+    while opcao == 1:
         print('=' * 12)
         print('= CADASTRO =')
         print('=' * 12)
@@ -45,6 +51,7 @@ while opcao != 7:  # Você estava usando 7 como saída, então mantive essa lóg
     
         if codigo in bancodados.keys():
             print ('O CÓDIGO DIGITADO JÁ ESTÁ CADASTRADO.')
+            
         else:        
             nome = input('Digite o nome do produto : ')
             preco = float(input('Digite o preco do kg/unidade : '))
@@ -55,8 +62,9 @@ while opcao != 7:  # Você estava usando 7 como saída, então mantive essa lóg
             print ('=' * 34)
             print ('= PRODUTO CADASTRADO COM SUCESSO =')
             print ('=' * 34)
+        opcao = retornomenu()
 
-    elif opcao ==2:
+    while opcao ==2:
         print ('=' * 24)
         print ('= CONSULTAR POR CÓDIGO =')
         print ('=' * 24)
@@ -71,8 +79,11 @@ while opcao != 7:  # Você estava usando 7 como saída, então mantive essa lóg
             print (produto['PRECO'])
         else:
             print ('Código Inexistente')
+        resp = input('Deseja continuar (S para sim e qualquer outra coisa para voltar ao menu)?')
+        if resp.lower() != 's':
+            break
 
-    elif opcao ==3:
+    while opcao ==3:
         print ('=' * 19)
         print ('= CONSULTAR TODOS =')
         print ('=' * 19)
@@ -83,7 +94,7 @@ while opcao != 7:  # Você estava usando 7 como saída, então mantive essa lóg
             print (codigo['PRECO'])
         print ('=' * 20) 
 
-    elif opcao ==4:
+    while opcao ==4:
         print ('=' * 20)
         print ('EXCLUIR ITEM')
         print ('=' * 20)
@@ -100,7 +111,11 @@ while opcao != 7:  # Você estava usando 7 como saída, então mantive essa lóg
             print('=' * 35)
         atualizarbanco()
 
-    elif opcao == 5:
+    resp = input('Deseja continuar (S para sim e qualquer outra coisa para voltar ao menu)?')
+    if resp.lower() != 's':
+        break
+    
+    while opcao == 5:
         print ('=' * 17)
         print ('= ALTERAR PREÇO =')
         print ('=' * 17)
@@ -116,7 +131,7 @@ while opcao != 7:  # Você estava usando 7 como saída, então mantive essa lóg
             atualizarbanco()
         else:
             print('CÓDIGO INEXISTENTE')
-    elif opcao ==6:
+    while opcao ==6:
         print('=' * 35)
         print('= APLICAR DESCONTOS OU ACRESCIMOS =')
         print('=' * 35)
@@ -199,7 +214,12 @@ while opcao != 7:  # Você estava usando 7 como saída, então mantive essa lóg
                 atualizarbanco()
             else:
                 print('OPCAO INVÁLIDA')
-    elif opcao ==0:
+
+        resp = input('Deseja continuar (S para sim e qualquer outra coisa para voltar ao menu)?')
+        if resp.lower() != 's':
+            break
+
+    if opcao ==0:
         print('=' * 20)
         print('SAIR')
         break
