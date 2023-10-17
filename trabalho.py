@@ -32,7 +32,7 @@ opcoes = {
     0: 'Sair'
 }
 
-while opcao != 7:  # Você estava usando 7 como saída, então mantive essa lógica.
+while opcao != 7:
     print('=' * 35)
     for numero, descricao in opcoes.items():
         print(f'{numero} - {descricao}')
