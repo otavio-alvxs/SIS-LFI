@@ -1,4 +1,4 @@
-def retornomenu(a):
+def retorno_menu(a):
     resp = input('Deseja realizar a operação novamente (S para sim e qualquer outra coisa para voltar ao menu) ? ')
     if resp.lower() != 's':
         opcao = 9
@@ -9,6 +9,9 @@ def retornomenu(a):
 
 def estado():
     print (f'Valor na memória: {memoria}')
+
+def atualizar_memoria(m,n,r):
+    print (f'{m} * {n} = {r}')
 
 opcoes = {
     1: 'Somar',
@@ -42,33 +45,33 @@ while opcao == 9:
         estado()
         num = float(input('Quanto deseja somar ao valor na memória? '))
         resultado = memoria + num
-        print (f'{memoria} + {num} = {resultado}')
+        atualizar_memoria(memoria, num, resultado)
         memoria = resultado
-        opcao = retornomenu(1)
+        opcao = retorno_menu(1)
     
     while opcao == 2:
         estado()
         num = float(input('Quanto deseja subtrair do valor na memória? '))
         resultado = memoria - num
-        print (f'{memoria} - {num} = {resultado}')
+        atualizar_memoria(memoria, num, resultado)
         memoria = resultado
-        opcao = retornomenu(2)
+        opcao = retorno_menu(2)
 
     while opcao == 3:
         estado()
         num = float(input('Por quanto deseja multiplicar o valor na memória? '))
         resultado = memoria * num
-        print (f'{memoria} * {num} = {resultado}')
+        atualizar_memoria(memoria, num, resultado)
         memoria = resultado
-        opcao = retornomenu(3)
+        opcao = retorno_menu(3)
     
     while opcao == 4:
         estado()
         num = float(input('Por quanto deseja dividir o valor na memória? '))
         resultado = memoria / num
-        print (f'{memoria} / {num} = {resultado}')
+        atualizar_memoria(memoria, num, resultado)
         memoria = resultado
-        opcao = retornomenu(4)
+        opcao = retorno_menu(4)
 
     while opcao == 5:
         memoria = 0
