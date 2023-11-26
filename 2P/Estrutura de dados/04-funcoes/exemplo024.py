@@ -34,11 +34,10 @@ if __name__ == '__main__':
     while op !=4:
         op = menu()
         if op == 1:
-            v = inicializa_lista(100000000)
-            #print(v)
+            v = inicializa_lista(5)
         elif op == 2:
             media = calcula_media(v)
-            print(f"a media eh {media:.2f}")
+            print(f"a media é {media:.2f}")
         elif op == 3:
             buscar_valor = int(input('Digite valor a ser procurado: '))
             if pesquisa(buscar_valor, v):
@@ -47,7 +46,3 @@ if __name__ == '__main__':
                 print(f'{buscar_valor} NAO ESTA presente na lista')
     else:
         print('Saindo....')
-
-    # media = calcula_media(v)
-    # print(v)
-    # print(f"a media eh {media:.2f}")
