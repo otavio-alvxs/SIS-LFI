@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Vendas</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <h2>Tabela de Vendas</h2>
+
+    <form id="formularioVendas">
+        <label for="cliente">Cliente:</label>
+        <input type="text" id="Cliente" required>
+
+        <label for="nicho">Nicho:</label>
+        <input type="text" id="nicho" required>
+
+        <label for="valorRevenda">Valor de Revenda:</label>
+        <input type="number" id="valorRevenda" required>
+
+        <label for="precoCusto">Preço de Custo:</label>
+        <input type="number" id="precoCusto" required>
+
+        <label for="estoque">Disponível em Estoque:</label>
+        <input type="number" id="estoque" required><br><br>
+
+        <button type="button" onclick="adicionarLinha()">Adicionar</button>
+    </form>
+
+    <table id="tabelaVendas">
+        <thead>
+            <tr>
+                <th>Cliente</th>
+                <th>Nicho</th>
+                <th>Valor de Revenda</th>
+                <th>Preço de Custo</th>
+                <th>Disponível em Estoque</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</body>
+</html>

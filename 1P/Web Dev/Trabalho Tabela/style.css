@@ -1,0 +1,56 @@
+body {
+    background-color: gainsboro;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    text-align: center;
+}
+
+form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 20%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    width: calc(100% - 10vh);
+    background-color: white;
+    margin: 5vh auto;
+}
+
+table, th, td {
+    border: 1px solid #9b9b9b;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+button {
+    background-color: limegreen;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
