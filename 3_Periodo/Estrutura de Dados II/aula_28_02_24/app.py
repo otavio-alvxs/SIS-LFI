@@ -1,22 +1,21 @@
 from flask import Flask, request
 import requests
 
+# instanciar a aplicação
 app = Flask(__name__)
 
-@app.route("/usuario", methods=["GET"])
+@app.route("/")
 def index():
-    try:
-        # http://127.0.0.5000/usuario?name=Cebolinha&idade=7
-        user = request.args.get("name", "padrao")
-        idade= int(request.args.get("idade"))
-        return f"Ola {user} - {idade} anos"
-    except:
-        return "Falha!!!"
+    return "aplicacao online"
 
-@app.route("/IBGE", methods="GET")
-def consulta_ibge():
-    nome = request.args.get("name")
-    resposta = request()
-    return resposta
+@app.route("/calcula", methods=["GET"])
+def calcula():
+    #http://127.0.0.1:5000/calcula?qtd=50&preco=2
+    quantidade = int(request.args.get("qtd"))
+    preco = int(request.args.get("preco"))
+    return f"R$ {quantidade*preco}"
+
+#rodar a app
+#debug == True para nao ser necessario recarregar a app no navegadorm por ex. So utilizar em ambiente de desenvolvimento
 
 app.run(debug=True)
