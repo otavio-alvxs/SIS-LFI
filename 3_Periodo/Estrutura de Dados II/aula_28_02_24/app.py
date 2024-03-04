@@ -4,7 +4,7 @@ import requests
 # instanciar a aplicação
 app = Flask(__name__)
 
-@app.route("/")
+@app.route("/") ### / --> root
 def index():
     return "aplicacao online"
 
