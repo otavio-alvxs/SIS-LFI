@@ -9,8 +9,14 @@ def busca_nome():
         nome = request.args.get("nome")
         response = busca(nome)
         print(type(response))
+        
         # percorrer o retorno do busca e somar todas as ocorrências do nome
-        return response
+        soma = 0
+        for valor in response[0]["res"]:
+            soma += valor.get("frequencia", 0)
+
+        mensagem = f"A soma de todas as ocorrências do nome Jose é {soma}"
+        return mensagem
 
     except Exception as e:
         return f"Falha na rota /busca_nome: {e}"
