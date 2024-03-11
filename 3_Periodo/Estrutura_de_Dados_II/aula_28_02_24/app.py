@@ -33,15 +33,14 @@ def paridade():
         return f"{valor} é ímpar"
     
     
-"""def verifica_par(valor):
-    valor = request.args.get("valor")
-    #return valor % 2 == 0
-    if int(valor) % 2 == 0:
-        return f"{valor} é par"
-    else:
-        return f"{valor} é ímpar"
+# def verifica_par(valor):
+#     valor = request.args.get("valor")
+#     #return valor % 2 == 0
+#     if int(valor) % 2 == 0:
+#         return f"{valor} é par"
+#     else:
+#         return f"{valor} é ímpar"
     
-"""
 @app.route("/somar_ate", methods=["GET"])
 def somar_ate():
     valor = int(request.args.get("valor"))
