@@ -41,7 +41,7 @@ def menor_frequencia(nome):
             menor_frequencia = elemento["frequencia"]
             menor_periodo = elemento["periodo"]
     objeto = {
-        f"Nome requisitado: {nome}\n"
+        f"Nome requisitado: {nome}"
         "menor_frequencia" : menor_frequencia,
         "periodo" : menor_periodo
     }
