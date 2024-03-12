@@ -3,16 +3,11 @@ import ibge
 
 app = Flask(__name__)
 
-@app.route("/busca_nome")
-def busca_nome():
+@app.route("/calcular_ocorrencias")
+def calcular_ocorrencias():
     try:
         nome = request.args.get("nome")
-        response = ibge.busca(nome)
-        soma = ibge.calcula_ocorrencias(response)
-        objeto_retorno = {
-            "nome_procurado": nome,
-            "total_ocorrencias": soma
-        }  
+        objeto_retorno = ibge.calcula_ocorrencias(nome)
         return objeto_retorno
     except Exception as e:
         return f"Falha na rota /busca_nome: {e}"
@@ -21,8 +16,7 @@ def busca_nome():
 def frequencia_max():
     try:
         nome = request.args.get("nome")
-        json = ibge.busca(nome)
-        objeto = ibge.maior_frequencia(json)
+        objeto = ibge.maior_frequencia(nome)
         return objeto
     except Exception as e:
         return f"Falha na rota /busca_nome: {e}"
