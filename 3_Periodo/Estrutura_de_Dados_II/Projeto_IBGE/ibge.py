@@ -5,22 +5,26 @@ def busca(nome):
     resposta = requests.get(url)
     return resposta.json()
 
-def calcula_ocorrencias(nome):
+def get_res(nome):
     json = busca(nome)
     conteudo = json[0]
     resposta = conteudo.get("res", [])
+    return resposta
+
+def calcula_ocorrencias(nome):
+    res = get_res(nome)
     soma = []
-    for elemento in resposta:
+    for elemento in res:
         frequencia = elemento.get("frequencia", 0)
         soma.append(frequencia)
     objeto_retorno = {
         "nome_requisitado" : nome,
         "ocorrencias_totais" : sum(soma)
     }
+    return objeto_retorno
+
 def maior_frequencia(nome):
-    json = busca(nome)
-    conteudo = json[0]
-    resposta = conteudo.get("res", [])
+    resposta = get_res(nome)
     maior_periodo = ""
     maior_frequencia = 0
     for elemento in resposta:
@@ -35,11 +39,9 @@ def maior_frequencia(nome):
     return objeto_retorno
 
 def menor_frequencia(nome):
-    json = busca(nome)
-    conteudo = json[0]
-    resposta = conteudo.get("res", [])
+    resposta = get_res(nome)
     menor_periodo = ""
-    menor_frequencia = 999999999999
+    menor_frequencia = float('inf')
     for elemento in resposta:
         if elemento["frequencia"] < menor_frequencia:
             menor_frequencia = elemento["frequencia"]
