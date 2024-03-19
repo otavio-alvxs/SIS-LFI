@@ -19,7 +19,7 @@ def frequencia_max():
         objeto = ibge.maior_frequencia(nome)
         return objeto
     except Exception as e:
-        return f"Falha na rota /busca_nome: {e}"
+        return f"Falha na rota /frequencia_max: {e}"
 
 @app.route("/frequencia_min")
 def frequencia_min():
