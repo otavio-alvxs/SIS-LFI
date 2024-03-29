@@ -52,3 +52,24 @@ def menor_frequencia(nome):
         "periodo" : menor_periodo
         }
     return objeto_retorno
+
+def ordem_crescente(nome):
+    lista = get_res(nome)
+    print (lista)
+    for i in range(0, len(lista) -1):
+        menor = i
+        for j in range(i+1, len(lista)):
+            if lista[menor]["frequencia"] > lista[j]["frequencia"]:
+                menor = j
+            lista[i], lista[menor] = lista[menor], lista[i]
+    return lista
+
+def bubble_sort(nome):
+    lista = get_res(nome)
+    n = len(lista)
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if lista[j]['frequencia'] > lista[j+1]['frequencia']:
+                lista[j], lista[j+1] = lista[j+1], lista[j]
+    return lista
+

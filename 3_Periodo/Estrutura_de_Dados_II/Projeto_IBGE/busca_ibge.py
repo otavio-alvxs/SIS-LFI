@@ -30,4 +30,22 @@ def frequencia_min():
     except Exception as e:
         return f"Falha na rota /frequencia_min: {e}"
 
+@app.route("/ordem_crescente")
+def ordem_crescente():
+    try:
+        nome = request.args.get("nome")
+        objeto = ibge.ordem_crescente(nome)
+        return objeto
+    except Exception as e:
+        return f"Falha na rota /ordem_crescente: {e}"
+
+@app.route("/bubble_sort")
+def bubble_sort():
+    try:
+        nome  = request.args.get("nome")
+        objeto = ibge.bubble_sort(nome)
+        return objeto
+    except Exception as e:
+        return f"Falha na rota /bubble_sort: {e}"
+
 app.run(debug=True)
