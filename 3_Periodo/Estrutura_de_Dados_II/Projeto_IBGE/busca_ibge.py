@@ -48,4 +48,13 @@ def bubble_sort():
     except Exception as e:
         return f"Falha na rota /bubble_sort: {e}"
 
+@app.route("/teste")
+def teste():
+    try:
+        nome = request.args.get("nome")
+        teste = ibge.busca(nome)
+        return teste
+    except Exception as e:
+        return f"Falha na rota /teste: {e}"
+
 app.run(debug=True)
