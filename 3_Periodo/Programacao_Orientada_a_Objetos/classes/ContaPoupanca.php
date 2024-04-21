@@ -16,4 +16,12 @@ class ContaPoupanca extends Conta {
         }
         return true;
     }
+    function Transferir($Conta, $Valor) {
+        if ($this-> Retirar($Valor)) 
+        {
+            $Conta->Depositar($Valor);
+        }
+    }
+    
 }
+
