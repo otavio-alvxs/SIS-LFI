@@ -10,6 +10,7 @@ def merge_sort():
 @app.route("/teste")
 def teste():
     response = search.busca()
+    #response = search.filtra_informacoes(json)
     return response
 
 app.run(debug=True)
