@@ -8,7 +8,7 @@ public class FilaPrioridade {
         PriorityQueue fila = new PriorityQueue<>();
         fila.add(5);
         fila.add(7);
-        fila.add(8)
+        fila.add(8);
         System.out.println(fila);
         for (int i = 0; i < 4; i++) {
             System.out.print("Atendeu: ");
