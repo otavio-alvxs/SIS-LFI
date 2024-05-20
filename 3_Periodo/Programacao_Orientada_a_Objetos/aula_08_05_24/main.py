@@ -1,5 +1,5 @@
-from class_conta import Conta
-from class_cliente import Cliente
+from classes.class_conta import Conta
+from classes.class_cliente import Cliente
 
 nome = str(input("Informe o nome: "))
 cpf = int(input("Informe o CPF: "))
