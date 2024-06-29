@@ -1,7 +1,8 @@
 {
     "editor.inlayHints.enabled": "off",
     "java.project.sourcePaths": [
-        "3_Periodo/Estrutura_de_Dados_II/Java/Projeto_aula/src"
+        "3_Periodo/Estrutura_de_Dados_II/Java/Projeto_aula/src",
+        "3_Periodo/Estrutura_de_Dados_II/Java/Projeto_Final/src"
     ],
     "java.project.referencedLibraries": [
         "3_Periodo/Estrutura_de_Dados_II/Java/Projeto_aula/lib/mariadb-java-client-3.4.0.jar"
