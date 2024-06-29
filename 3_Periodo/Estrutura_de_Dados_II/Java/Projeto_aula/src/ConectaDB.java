@@ -14,7 +14,6 @@ public class ConectaDB {
             conexao = DriverManager.getConnection(url, usuario, senha);
             System.out.println("conexão realizada");
         } catch (Exception e) {
-            // TODO: handle exception
             System.out.println("Error: " + e.getMessage());
             System.out.println("Drive não encontrado");
         }

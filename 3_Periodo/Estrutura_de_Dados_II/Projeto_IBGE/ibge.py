@@ -72,4 +72,3 @@ def bubble_sort(nome):
             if lista[j]['frequencia'] > lista[j+1]['frequencia']:
                 lista[j], lista[j+1] = lista[j+1], lista[j]
     return lista
-

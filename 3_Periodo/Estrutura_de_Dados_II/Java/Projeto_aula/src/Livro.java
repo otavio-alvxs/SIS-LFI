@@ -3,15 +3,11 @@ public class Livro {
     private int idLivro;
     private String anoPub;
     private String autor;
-    private static int contador = 0;
 
     public Livro(String titulo, String autor, String ano_publicacao) {
         this.setTitulo(titulo);
         this.setAutor(autor);
         this.setAnoPub(ano_publicacao);
-        
-        contador += 1;
-        this.setIdLivro(contador);
     }
 
     public int getId(){
