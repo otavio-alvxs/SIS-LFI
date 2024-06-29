@@ -24,7 +24,7 @@ public class LivroDAO {
 
         } catch (Exception e) {
             System.out.println("Falha na inserção: " + e.getMessage());
-        }
+        } new ConectaDB().desconectaDB();
     }
 
     public void consultarTodos() {
