@@ -93,6 +93,7 @@ public class UsuarioDAO {
             PreparedStatement pst = conexao.getConexaoDB().prepareStatement(sql);
             pst.setString(1, usuario.getNome());
             pst.setString(2, usuario.getEmail());
+            pst.setInt(3, usuario.getId());
 
             int resultado = pst.executeUpdate();
             if (resultado > 0){

@@ -144,8 +144,7 @@ public class Main {
         UsuarioDAO usuarioDAO = new UsuarioDAO();
         int opcao;
         int id;
-        String usuario;
-        String email;
+        String usuario, email, nome;
 
         do {
             System.out.println("\nGerenciar Usuários:");
@@ -178,11 +177,22 @@ public class Main {
                     break;
 
                 case 2:
-                    System.out.print("Digite o id do usuário a ser alterado: ");
+                    System.out.println("Digite o id do usuário a ser alterado: ");
                     id = scanner.nextInt();
                     Usuario usuarioAntigo = usuarioDAO.consultarID(id);
-                    usuarioDAO.alterar(usuarioAntigo);
-                    System.out.print(usuarioAntigo);
+                    if (usuarioAntigo != null){
+                        System.out.println("Alterando o usuário: " + usuarioAntigo);
+                        System.out.println("Digite o novo nome do usuário: ");
+                        nome = scanner.next();
+                        System.out.println("Digite o novo email do usuário: ");
+                        email = scanner.next();
+
+                        usuarioAntigo.setNome(nome);
+                        usuarioAntigo.setEmail(email);
+
+                        usuarioDAO.alterar(usuarioAntigo);
+                        System.out.println("Usuário " + nome + " atualizado com sucesso!");
+                    }
                     break;
 
                 case 3:
