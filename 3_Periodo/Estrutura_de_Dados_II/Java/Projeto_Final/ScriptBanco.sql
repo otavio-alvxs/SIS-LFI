@@ -14,5 +14,6 @@ CREATE TABLE livro (
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	titulo varchar(255),
 	anoPub char(4),
-	autor varchar(255)
+	autor varchar(255),
+	disponivel boolean
 );
