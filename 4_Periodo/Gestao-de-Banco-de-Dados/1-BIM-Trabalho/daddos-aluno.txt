@@ -1,0 +1,4 @@
+Nome: Otavio Alves Oliveira Costa
+RA: 007078
+
+https://github.com/otavio-alvxs/SIS-LFI/blob/main/4_Periodo/Gestao-de-Banco-de-Dados/1-BIM-Trabalho/script.sql
