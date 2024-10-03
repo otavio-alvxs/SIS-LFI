@@ -1,0 +1,6 @@
+Resultado da missão 12: O espaço é limitado
+Espaço utilizado pelo usuário phoenix é 20G
+
+Resultado da missão 13: Verificando Áreas Críticas
+Espaço utilizado no diretório dos tripulantes 20G
+
