@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# Verifica se o usuário que está executando o script é o usuário "root"
 if [ "$EUID" -ne 0 ]; then
     echo "O script especificado deve ser executado como superusuário"
     exit 1
