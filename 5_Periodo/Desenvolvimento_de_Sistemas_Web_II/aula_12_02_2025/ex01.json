@@ -1,0 +1,15 @@
+{
+    "nome": "Otavio Alves Oliveira Costa",
+    "idade": "20",
+    "telefone": "35987654321",
+    "e-mail": "xaolinmatadordeporco@gmail.com",
+    "endereço": {
+                    "logradouro": "Rua dos Bobos",
+                    "número": 0,
+                    "bairro": "Cracolândia",
+                    "cidade": "São Sebastião do Paraíso",
+                    "uf": "MG",
+                    "cep": "37950000"
+                },
+    "filmes": ["Interstellar", "O lobo de Wall Street", "Kingsman: Serviço secreto"]
+}
