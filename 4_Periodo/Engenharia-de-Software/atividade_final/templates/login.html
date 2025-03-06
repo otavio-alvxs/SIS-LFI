@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h2>Login</h2>
+    <form method="POST">
+        <label for="NM_USUARIO">Usuário:</label>
+        <input type="text" name="NM_USUARIO" required>
+        
+        <label for="DS_SENHA">Senha:</label>
+        <input type="password" name="DS_SENHA" required>
+
+        <button type="submit">Entrar</button>
+    </form>
+</body>
+</html>
