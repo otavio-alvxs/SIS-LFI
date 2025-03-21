@@ -17,3 +17,14 @@ body * {
     font-family: inherit;
     font-weight: inherit;
 }
+
+header {
+    display: flex;
+    align-items: center;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+#header-title {
+    margin-left: 4%;
+}

@@ -1,3 +1,4 @@
+<!-- 
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,4 +19,30 @@
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 
+</html> -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-vindo, {{ session['usuario'] }}!</h1>
+        <p>Você está logado como {{ session['tipo_usuario'] }}.</p>
+        
+        <div class="menu">
+            <a href="{{ url_for('agendar_cancelar_consulta') }}">Agendar / Cancelar Consulta</a><br>
+            {% if session['tipo_usuario'] == 'admin' %}
+                <a href="{{ url_for('cadastrar_usuario') }}">Cadastrar Novo Usuário</a><br>
+                <a href="{{ url_for('atualizar_usuario', nm_usuario=session['usuario']) }}">Atualizar Dados</a><br>
+            {% endif %}
+            <a href="{{ url_for('logout') }}">Sair</a>
+        </div>
+    </div>
+</body>
 </html>
+

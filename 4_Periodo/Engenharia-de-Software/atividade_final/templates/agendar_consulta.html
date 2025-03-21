@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar ou Cancelar Consultas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Agendar ou Cancelar Consulta</h1>
+    </header>
+
+    <main>
+        <!-- Formulário de Agendamento -->
+        <section>
+            <h2>Agendar Consulta</h2>
+            <form method="POST">
+                <label for="paciente">Nome do Paciente:</label>
+                <input type="text" name="paciente" id="paciente" required>
+
+                <label for="medico">Nome do Médico:</label>
+                <input type="text" name="medico" id="medico" required>
+
+                <label for="especialidade">Especialidade:</label>
+                <input type="text" name="especialidade" id="especialidade" required>
+
+                <label for="data">Data da Consulta:</label>
+                <input type="date" name="data" id="data" required>
+
+                <label for="horario">Horário da Consulta:</label>
+                <input type="time" name="horario" id="horario" required>
+
+                <button type="submit">Agendar</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <!-- Formulário de Cancelamento -->
+        <section>
+            <h2>Cancelar Consulta</h2>
+            <form method="POST">
+                <label for="consulta_id">ID da Consulta:</label>
+                <input type="number" name="consulta_id" id="consulta_id" required>
+
+                <button type="submit">Cancelar Consulta</button>
+            </form>
+        </section>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <ul>
+            {% for category, message in messages %}
+            <li class="{{ category }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+    </main>
+
+    <footer>
+        <a href="{{ url_for('home') }}">Voltar à página inicial</a>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
