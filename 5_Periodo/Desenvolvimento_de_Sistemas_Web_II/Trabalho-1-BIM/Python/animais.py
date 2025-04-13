@@ -4,7 +4,7 @@ from dbConfig import connect_db
 from flask import jsonify
 from flask import request, Blueprint
 
-cidade_bp = Blueprint("/cidade_bp", __name__)
+animal_bp = Blueprint("/animal_bp", __name__)
 
 @cidade_bp.route("/animal")
 def animal():
