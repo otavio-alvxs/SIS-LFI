@@ -4,9 +4,9 @@ from dbConfig import connect_db
 from flask import jsonify
 from flask import request, Blueprint
 
-cidade_bp = Blueprint("/cidade_bp", __name__)
+animal_bp = Blueprint("/animal_bp", __name__)
 
-@cidade_bp.route("/animal")
+@animal_bp.route("/animal")
 def animal():
     try:
         conn = connect_db()
@@ -22,8 +22,8 @@ def animal():
         cur.close()
         conn.close()
 
-@cidade_bp.route("/animal/<id>")
-def cidadeById(id):
+@animal_bp.route("/animal/<id>")
+def animalById(id):
     try:
         conn = connect_db()
         cur = conn.cursor(pymysql.cursors.DictCursor)
@@ -40,8 +40,8 @@ def cidadeById(id):
         
 
 
-@cidade_bp.route("/animal", methods = ["POST"])
-def cidadeNovo():
+@animal_bp.route("/animal", methods = ["POST"])
+def animalNovo():
     try:
         conn = connect_db()
         cur = conn.cursor(pymysql.cursors.DictCursor)
@@ -64,8 +64,8 @@ def cidadeNovo():
         cur.close()
         conn.close()
 
-@cidade_bp.route("/animal/<id>/", methods = ["PUT"])
-def cidadeAlterar(id):
+@animal_bp.route("/animal/<id>/", methods = ["PUT"])
+def animalAlterar(id):
     try:
         conn = connect_db()
         cur = conn.cursor(pymysql.cursors.DictCursor)
@@ -89,8 +89,8 @@ def cidadeAlterar(id):
         cur.close()
         conn.close()
 
-@cidade_bp.route("/animal/<id>/", methods = ["DELETE"])
-def cidadeExcluir(id):
+@animal_bp.route("/animal/<id>/", methods = ["DELETE"])
+def animalExcluir(id):
     try:
         conn = connect_db()
         cur = conn.cursor(pymysql.cursors.DictCursor)
